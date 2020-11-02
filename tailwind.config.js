@@ -28,7 +28,7 @@ module.exports = {
         200: '#edf2f7',
         300: '#e2e8f0',
         400: '#cbd5e0',
-        500: '#a0aec0',
+        500: '#8b8b8f',
         600: '#718096',
         700: '#4a5568',
         800: '#2d3748',
@@ -252,6 +252,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        'Lato',
         'system-ui',
         '-apple-system',
         'BlinkMacSystemFont',
