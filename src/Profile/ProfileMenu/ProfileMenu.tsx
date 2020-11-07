@@ -1,4 +1,5 @@
 import React from 'react';
+import {useToasts} from 'react-toast-notifications';
 import ProfileMenuButton from './ProfileMenuButton';
 
 function ProfileMenu(props: { show: boolean }) {
@@ -26,12 +27,12 @@ function ProfileMenu(props: { show: boolean }) {
         Achievements
       </div>
       <div className='border-b border-gray-200'>
-        <ProfileMenuButton label='Get the mobile app' iconClass='icon__mobile' action='' />
-        <ProfileMenuButton label='Community' iconClass='icon__community' action='' />
-        <ProfileMenuButton label='Knowledge base' iconClass='icon__knowledge' action='' />
+        <ProfileMenuButton label='Get the mobile app' iconClass='icon__mobile' />
+        <ProfileMenuButton label='Community' iconClass='icon__community' />
+        <ProfileMenuButton label='Knowledge base' iconClass='icon__knowledge' />
       </div>
-      <ProfileMenuButton label='Settings' iconClass='icon__cog' action='' />
-      <ProfileMenuButton label='Log out' iconClass='icon__log-out' action='' red />
+      <ProfileMenuButton label='Settings' iconClass='icon__cog' />
+      <ProfileMenuButton label='Log out' iconClass='icon__log-out' red />
     </div>
   );
 }

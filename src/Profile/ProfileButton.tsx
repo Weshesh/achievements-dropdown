@@ -9,7 +9,11 @@ interface Props {
 
 function ProfileButton(props: Props) {
   return (
-    <button type='button' className='flex rounded px-px hover:bg-gray-100 focus:bg-gray-100' onClick={props.toggleMenu}>
+    <button
+      type='button'
+      className='flex rounded px-px hover:bg-gray-100 focus:bg-gray-100'
+      onClick={props.toggleMenu}
+    >
       <div className='flex flex-col text-right p-px'>
         <span className='text-sm font-extrabold leading-tight'>
           {props.company.user}
