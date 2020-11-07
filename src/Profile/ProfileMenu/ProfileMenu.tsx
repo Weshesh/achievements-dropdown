@@ -1,5 +1,6 @@
 import React from 'react';
 import {useToasts} from 'react-toast-notifications';
+import ProfileMenuAchievements from './ProfileMenuAchievements';
 import ProfileMenuButton from './ProfileMenuButton';
 
 function ProfileMenu(props: { show: boolean }) {
@@ -24,7 +25,7 @@ function ProfileMenu(props: { show: boolean }) {
         {populateCompanies}
       </div>
       <div className='border-b border-gray-200'>
-        Achievements
+        <ProfileMenuAchievements />
       </div>
       <div className='border-b border-gray-200'>
         <ProfileMenuButton label='Get the mobile app' iconClass='icon__mobile' />
