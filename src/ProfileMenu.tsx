@@ -5,7 +5,7 @@ function ProfileMenu(props: { show: boolean}) {
     <div className='absolute flex bg-red'>
 
     </div>
-  )
+  );
 }
 
 export default ProfileMenu;
