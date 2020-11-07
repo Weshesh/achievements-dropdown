@@ -26,12 +26,12 @@ function ProfileMenu(props: { show: boolean }) {
         Achievements
       </div>
       <div className='border-b border-gray-200'>
-        <ProfileMenuButton label='Get the mobile app' iconClass='icon__cog' action='' />
-        <ProfileMenuButton label='Community' iconClass='icon__cog' action='' />
-        <ProfileMenuButton label='Knowledge base' iconClass='icon__cog' action='' />
+        <ProfileMenuButton label='Get the mobile app' iconClass='icon__mobile' action='' />
+        <ProfileMenuButton label='Community' iconClass='icon__community' action='' />
+        <ProfileMenuButton label='Knowledge base' iconClass='icon__knowledge' action='' />
       </div>
       <ProfileMenuButton label='Settings' iconClass='icon__cog' action='' />
-      <ProfileMenuButton label='Log out' iconClass='icon__cog' action='' red />
+      <ProfileMenuButton label='Log out' iconClass='icon__log-out' action='' red />
     </div>
   );
 }

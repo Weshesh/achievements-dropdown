@@ -21,8 +21,26 @@ button:focus {
   content: '';
 }
 
+.icon__achievements {
+  mask: url("../gfx/icon-achievements.svg") no-repeat center/contain;
+}
 .icon__cog {
   mask: url("../gfx/icon-cog.svg") no-repeat center/contain;
+}
+.icon__community {
+  mask: url("../gfx/icon-community.svg") no-repeat center/contain;
+}
+.icon__knowledge {
+  mask: url("../gfx/icon-knowledge.svg") no-repeat center/contain;
+}
+.icon__log-out {
+  mask: url("../gfx/icon-log-out.svg") no-repeat center/contain;
+}
+.icon__mobile {
+  mask: url("../gfx/icon-mobile.svg") no-repeat center/contain;
+}
+.icon__success {
+  mask: url("../gfx/icon-success.svg") no-repeat center/contain;
 }
 
 .ProfileMenu {
