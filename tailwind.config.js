@@ -35,15 +35,15 @@ module.exports = {
         900: '#333333', // Modified
       },
       red: {
-        100: '#fff5f5',
-        200: '#fed7d7',
-        300: '#feb2b2',
-        400: '#fc8181',
-        500: '#f56565',
-        600: '#e53e3e',
-        700: '#c53030',
-        800: '#9b2c2c',
-        900: '#742a2a',
+        100: '#FBEBED', // Modified
+        200: '#F4CDD2', // Modified
+        300: '#EDAFB6', // Modified
+        400: '#E07280', // Modified
+        500: '#D33649', // Modified
+        600: '#BE3142', // Modified
+        700: '#7F202C', // Modified
+        800: '#5F1821', // Modified
+        900: '#3F1016', // Modified
       },
       orange: {
         100: '#fffaf0',
@@ -68,11 +68,11 @@ module.exports = {
         900: '#744210',
       },
       green: {
-        100: '#f0fff4',
+        100: '#e8f1e9', // Modified
         200: '#c6f6d5',
-        300: '#9ae6b4',
+        300: '#37a447', // Modified
         400: '#68d391',
-        500: '#48bb78',
+        500: '#157123', // Modified
         600: '#38a169',
         700: '#2f855a',
         800: '#276749',

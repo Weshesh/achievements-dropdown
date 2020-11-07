@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import {Counter} from './features/counter/Counter';
-import ProfileButton from './ProfileButton';
-import ProfileMenu from './ProfileMenu';
+import ProfileButton from './Profile/ProfileButton';
+import ProfileMenu from './Profile/ProfileMenu/ProfileMenu';
 
 export interface Company {
   user: string,
   companies: string[],
-}
+};
 
 const sampleCompany = {
   user: 'Elon Musk',

@@ -4,12 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 button:focus {
   outline: none;
-  border: 1px solid #8b8b8f;
 }
 
+.icon-16 {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  content: '';
+}
 .icon-20 {
   display: inline-block;
   width: 1.25rem;
