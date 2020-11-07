@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Counter} from './features/counter/Counter';
-import './App.css';
 import ProfileButton from './ProfileButton';
 import ProfileMenu from './ProfileMenu';
 
