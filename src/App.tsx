@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="flex justify-end px-10 py-4">
+      <header className="flex justify-end px-8 py-4">
         <ProfileMenu company={sampleCompany} currentlySelected={currentCompany} />
       </header>
       <Counter />

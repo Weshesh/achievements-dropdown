@@ -12,7 +12,7 @@ function ProfileMenu(props: { company: Company, currentlySelected: string}) {
           {props.currentlySelected}
         </span>
       </div>
-      <div className='flex items-center pl-3 h-full'>
+      <div className='flex items-center pl-3 pr-2 h-full'>
         <i className='icon-20 icon__cog bg-gray-900'></i>
       </div>
     </button>
