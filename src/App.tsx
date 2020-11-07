@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import ProfileButton from './ProfileButton';
 import ProfileMenu from './ProfileMenu';
 
 export interface Company {
@@ -20,13 +21,17 @@ const sampleCompany = {
 
 function App() {
   const [currentCompany, setCurrentCompany] =  useState<string>(sampleCompany.companies[0]);
+  const [isMenuOpen, toggleMenu] = useState<boolean>(false);
+  const changeMenuState = ()  => toggleMenu(!isMenuOpen);
 
   return (
-    <div className="App">
-      <header className="flex justify-end px-8 py-4">
-        <ProfileMenu company={sampleCompany} currentlySelected={currentCompany} />
+    <div className='App'>
+      <header className='relative flex justify-end px-8 py-4'>
+        <ProfileButton company={sampleCompany} currentlySelected={currentCompany} toggleMenu={changeMenuState} />
+        <ProfileMenu show={isMenuOpen} />
       </header>
       <Counter />
+      {isMenuOpen ? 'LALALAL' : 'NONONO'}
     </div>
   );
 }
