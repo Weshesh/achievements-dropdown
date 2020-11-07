@@ -33,7 +33,6 @@ function App() {
         <ProfileMenu show={isMenuOpen} />
       </header>
       <Counter />
-      {isMenuOpen ? 'LALALAL' : 'NONONO'}
     </div>
   );
 }
