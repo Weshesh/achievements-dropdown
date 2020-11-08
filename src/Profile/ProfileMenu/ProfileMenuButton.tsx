@@ -19,7 +19,7 @@ function ProfileMenuButton(props: Props) {
     <button
       type='button'
       className={
-        'flex items-center px-4 py-3 w-full text-left '
+        'flex items-center px-4 py-2 w-full text-left '
         + (red
           ? 'hover:bg-red-100 focus:bg-red-200'
           : 'hover:bg-gray-100 focus:bg-gray-200')
