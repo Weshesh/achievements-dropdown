@@ -30,6 +30,9 @@ button:focus {
 .icon__achievements {
   mask: url("../gfx/icon-achievements.svg") no-repeat center/contain;
 }
+.icon__back {
+  mask: url("../gfx/icon-back.svg") no-repeat center/contain;
+}
 .icon__cog {
   mask: url("../gfx/icon-cog.svg") no-repeat center/contain;
 }

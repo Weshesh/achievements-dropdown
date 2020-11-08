@@ -17,7 +17,7 @@ function ProfileMenu(props: { show: boolean }) {
 
   return (
     <div
-      className={`absolute rounded-xl bg-white shadow-xl duration-200 z-10 ${props.show ? 'visible opacity-100' : 'invisible opacity-0'} overflow-x-hidden`}
+      className={`absolute rounded-xl bg-white shadow-xl duration-200 z-20 ${props.show ? 'visible opacity-100' : 'invisible opacity-0'} overflow-x-hidden`}
       style={{top: '100%', width: '304px'}}
     >
       <div className='w-full h-full'>
@@ -40,16 +40,18 @@ function ProfileMenu(props: { show: boolean }) {
       </div>
 
       <div
-        className='absolute top-0 w-full h-full bg-white shadow-2xl duration-300'
+        className='absolute top-0 w-full h-full bg-white shadow-2xl duration-200'
         style={{left: (isAchievementsOpen ? '0%': '110%')}}
       >
         <button
           type='button'
-          className='px-4 pt-3 pb-1 text-gray-600 font-bold'
+          className='flex items-center px-4 pt-3 pb-1 text-gray-600 font-bold'
           onClick={() => toggleAchievements(false)}
         >
-          <i className='' />
-          Achievements
+          <i className='icon-16 icon__back bg-gray-900 mr-2' />
+          <span>
+            Achievements
+          </span>
         </button>
       </div>
     </div>
