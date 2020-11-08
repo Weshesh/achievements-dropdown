@@ -5,23 +5,50 @@ function ProfileMenuAchievementsList() {
   const toDo = 11;
   const percentage = done / toDo * 100;
 
-  return (
-    <button type='button' className='px-4 py-3 w-full hover:bg-gray-100 focus:bg-gray-200'>
-      <div className='flex items-center w-full text-left'>
-        <i className='icon-22 icon__achievements mr-3 bg-gray-900' />
+  const achievementsItem = (
+    <button type='button' className='w-full'>
+      <div>
+        Install mobile app
+        <p>
+          See your farm data wherever you go, for you and for your workers.
+        </p>
+      </div>
+      <div className='flex'>
+        <div className='relative mt-2 mb-1 rounded-full w-full h-2 bg-gray-300'>
+          <div className='absolute left-0 rounded-full h-2 bg-gray-800' style={{width: '13%'}}></div>
+        </div>
         <div>
-          <b>
-            Achievements
-          </b>
-          <div>
-            {done.toString()}/{toDo.toString()} - {Math.round(percentage)}%
-          </div>
+          0/1
         </div>
       </div>
-      <div className='relative rounded-full my-2 w-full h-2 bg-gray-300'>
-        <div className='absolute left-0 rounded-full h-2 bg-gray-800' style={{width: '13%'}}></div>
+    </button>
+  );
+
+  return (
+    <div className='h-full overflow-y-scroll'>
+      {achievementsItem}
+      {achievementsItem}
+      {achievementsItem}
+      {achievementsItem}
+      {achievementsItem}
+      {achievementsItem}
+      <button type='button' className='w-full'>
+      <div>
+        Install mobile app
+        <p>
+          See your farm data wherever you go, for you and for your workers.
+        </p>
+      </div>
+      <div className='flex'>
+        <div className='relative mt-2 mb-1 rounded-full w-full h-2 bg-gray-300'>
+          <div className='absolute left-0 rounded-full h-2 bg-gray-800' style={{width: '13%'}}></div>
+        </div>
+        <div>
+          0/1
+        </div>
       </div>
     </button>
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import ProfileMenuAchievementsList from '../ProfileMenuAchievementsList';
 import ProfileMenuAchievements from './ProfileMenuAchievements';
 import ProfileMenuButton from './ProfileMenuButton';
 import ProfileMenuCompanybutton from './ProfileMenuCompanyButton';
@@ -40,7 +41,7 @@ function ProfileMenu(props: { show: boolean }) {
       </div>
 
       <div
-        className='absolute top-0 w-full h-full bg-white shadow-2xl duration-200'
+        className='absolute top-0 w-full h-full bg-white shadow-2xl duration-200 overflow-hidden'
         style={{left: (isAchievementsOpen ? '0%': '110%')}}
       >
         <button
@@ -53,6 +54,7 @@ function ProfileMenu(props: { show: boolean }) {
             Achievements
           </span>
         </button>
+        <ProfileMenuAchievementsList />
       </div>
     </div>
   );
