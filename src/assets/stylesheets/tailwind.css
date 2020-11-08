@@ -20,6 +20,12 @@ button:focus {
   height: 1.25rem;
   content: '';
 }
+.icon-22 {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: '';
+}
 
 .icon__achievements {
   mask: url("../gfx/icon-achievements.svg") no-repeat center/contain;
@@ -41,10 +47,4 @@ button:focus {
 }
 .icon__success {
   mask: url("../gfx/icon-success.svg") no-repeat center/contain;
-}
-
-.ProfileMenu {
-  position: absolute;
-  top: 100%;
-  width: 304px;
 }

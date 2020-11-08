@@ -21,12 +21,12 @@ function ProfileMenuButton(props: Props) {
       className={
         'flex items-center px-4 py-3 w-full text-left '
         + (red
-          ? 'hover:bg-red-100 focus:bg-red-100'
-          : 'hover:bg-gray-100 focus:bg-gray-100')
+          ? 'hover:bg-red-100 focus:bg-red-200'
+          : 'hover:bg-gray-100 focus:bg-gray-200')
       }
       onClick={() => notInUse()}
     >
-      <i className={`icon-16 ${iconClass} ${red ? 'bg-red-500': 'bg-gray-500'} mr-2`} />
+      <i className={`icon-16 ${iconClass} ${red ? 'bg-red-500': 'bg-gray-900'} mr-2`} />
       <span className={red ? 'text-red-500' : ''}>
         {label}
       </span>

@@ -25,13 +25,13 @@ module.exports = {
 
       gray: {
         100: '#f7fafc',
-        200: '#edf2f7',
+        200: '#eeeef2', // Modified
         300: '#dcdce0', // Modified
         400: '#cbd5e0',
         500: '#8b8b8f', // Modified
         600: '#718096',
         700: '#717175', // Modified
-        800: '#2d3748',
+        800: '#3f475e', // Modified
         900: '#333333', // Modified
       },
       red: {

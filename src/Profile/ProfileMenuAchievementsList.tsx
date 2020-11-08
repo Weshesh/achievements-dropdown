@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProfileMenuAchievements() {
+function ProfileMenuAchievementsList() {
   const done = 3;
   const toDo = 11;
   const percentage = done / toDo * 100;
@@ -25,4 +25,4 @@ function ProfileMenuAchievements() {
   );
 }
 
-export default ProfileMenuAchievements;
+export default ProfileMenuAchievementsList;
