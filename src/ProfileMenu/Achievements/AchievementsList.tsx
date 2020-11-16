@@ -11,7 +11,7 @@ function AchievementsList() {
   ));
 
   return (
-    <div className='h-full no-scrollbar overflow-y-scroll'>
+    <div className='relative h-full no-scrollbar overflow-y-scroll' >
       {populateAchievementsList}
     </div>
   );

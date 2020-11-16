@@ -2,50 +2,37 @@ import React from 'react';
 import {Achievement} from '../../features/userSlice';
 
 function AchievementItem(props: {achievement: Achievement}) {
-  const done = 3;
-  const toDo = 11;
-  const percentage = done / toDo * 100;
+  const calculatePercentage = Math.round(props.achievement.done / props.achievement.toDo * 100);
+  const isCompleted = props.achievement.toDo === props.achievement.done ? true : false;
+  const getCompletionValue = (props.achievement.showPercentage)
+    ? calculatePercentage + '%'
+    : (props.achievement.done + '/' + props.achievement.toDo);
 
   return (
     <button type='button' className='px-4 py-2 w-full hover:bg-gray-100 focus:bg-gray-200'>
-      <div className='flex items-center w-full text-left'>
-        <i className='icon-22 icon__achievements mr-3 bg-gray-900' />
-        <div>
-          <b>
-            Achievements
-          </b>
-          <div>
-            {done.toString()}/{toDo.toString()} - {Math.round(percentage)}%
-          </div>
-        </div>
+      <div className='text-left'>
+        <span className={isCompleted ? 'text-green-500' : ''}>
+          {props.achievement.name}
+        </span>
+        <p>
+          {props.achievement.description}
+        </p>
       </div>
-      <div className='relative mt-2 mb-1 rounded-full w-full h-2 bg-gray-300'>
-        <div className='absolute left-0 rounded-full h-2 bg-gray-800' style={{width: '13%'}}></div>
+      <div className='flex'>
+        <div className='relative flex mt-2 mb-1 rounded-full w-full h-2 bg-gray-300' >
+          <div
+            className={`absolute left-0 rounded-full h-2 ${isCompleted ? 'bg-green-500 ': 'bg-gray-800'}`}
+            style={{width: (calculatePercentage + '%')}}
+          />
+        </div>
+        <div className='ml-3'>
+          {isCompleted
+            ? <i className='icon-20 icon__success ml-3 bg-green-500' />
+            : getCompletionValue}
+        </div>
       </div>
     </button>
   );
 }
 
 export default AchievementItem;
-
-/*
-    <button key='e.name' type='button' className='w-full'>
-      <div>
-        {achievement.name}
-        <p>
-          {achievement.description}
-        </p>
-      </div>
-      <div className='flex'>
-        <div className='relative mt-2 mb-1 rounded-full w-full h-2 bg-gray-300'>
-          <div
-            className='absolute left-0 rounded-full h-2 bg-gray-800'
-            style={{width: '13%'}}
-          />
-        </div>
-        <div>
-          0/1
-        </div>
-      </div>
-    </button>
-*/

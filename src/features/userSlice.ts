@@ -1,13 +1,13 @@
-import {createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 import {RootState} from '../app/store';
-import placeholderCompanies from './placeholderCompanies.json'
+import sampleCompanies from './placeholderCompanies'
 
 export interface Achievement {
   name: string,
-  description: string,
+  description?: string,
   toDo: number,
   done: number,
-  showPercentage: boolean
+  showPercentage?: boolean
 }
 
 export interface Company {
@@ -22,41 +22,7 @@ interface UserState {
 }
 
 const initialState: UserState = {
-  companies: [
-    {
-      name: 'Long Name Is Long OÜ',
-      description: 'A company',
-      achievements: [
-        {
-          name: '1To the laundry',
-          description: 'Its dirty',
-          toDo: 10,
-          done: 5,
-          showPercentage: true
-        },
-        {
-          name: 'Dont do the laundry',
-          description: 'Its dirty',
-          toDo: 10,
-          done: 5,
-          showPercentage: true
-        }
-      ]
-    },
-    {
-      name: '2 OÜ',
-      description: 'A company',
-      achievements: [
-        {
-          name: '12To the laundry',
-          description: 'Its dirty',
-          toDo: 10,
-          done: 5,
-          showPercentage: true
-        }
-      ]
-    }
-  ],
+  companies: sampleCompanies,
   get currentlySelected() {
     return this.companies[0]
   }
