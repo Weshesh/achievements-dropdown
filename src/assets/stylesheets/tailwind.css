@@ -51,3 +51,7 @@ button:focus {
 .icon__success {
   mask: url("../gfx/icon-success.svg") no-repeat center/contain;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

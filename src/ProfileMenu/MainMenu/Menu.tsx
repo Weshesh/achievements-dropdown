@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
-import AchievementsList from '../AchievementsList';
-import ProfileMenuAchievements from './ProfileMenuAchievements';
+import AchievementsList from '../Achievements/AchievementsList';
 import MenuButton from './MenuButton';
 import CompanyButton from './CompanyButton';
 import {companyList} from '../../features/userSlice';
+import AchievementButton from '../Achievements/AchievementButton';
 
 
 function Menu(props: { showMenu: boolean }) {
@@ -41,7 +41,7 @@ function Menu(props: { showMenu: boolean }) {
           className='border-b border-gray-200'
           onClick={() => toggleAchievements(true)}
         >
-          <ProfileMenuAchievements />
+          <AchievementButton />
         </div>
         <div className='border-b border-gray-200'>
           <MenuButton

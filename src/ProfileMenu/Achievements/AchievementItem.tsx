@@ -1,7 +1,7 @@
 import React from 'react';
+import {Achievement} from '../../features/userSlice';
 
-
-function ProfileMenuAchievements() {
+function AchievementItem(props: {achievement: Achievement}) {
   const done = 3;
   const toDo = 11;
   const percentage = done / toDo * 100;
@@ -26,4 +26,26 @@ function ProfileMenuAchievements() {
   );
 }
 
-export default ProfileMenuAchievements;
+export default AchievementItem;
+
+/*
+    <button key='e.name' type='button' className='w-full'>
+      <div>
+        {achievement.name}
+        <p>
+          {achievement.description}
+        </p>
+      </div>
+      <div className='flex'>
+        <div className='relative mt-2 mb-1 rounded-full w-full h-2 bg-gray-300'>
+          <div
+            className='absolute left-0 rounded-full h-2 bg-gray-800'
+            style={{width: '13%'}}
+          />
+        </div>
+        <div>
+          0/1
+        </div>
+      </div>
+    </button>
+*/

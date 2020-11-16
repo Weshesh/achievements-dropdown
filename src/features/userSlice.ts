@@ -2,7 +2,7 @@ import {createSlice, PayloadAction } from '@reduxjs/toolkit';
 import {RootState} from '../app/store';
 import placeholderCompanies from './placeholderCompanies.json'
 
-interface Achievement {
+export interface Achievement {
   name: string,
   description: string,
   toDo: number,

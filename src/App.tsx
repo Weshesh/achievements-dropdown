@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {ToastProvider} from 'react-toast-notifications';
-import ProfileButton from './Profile/ProfileButton';
-import Menu from './Profile/ProfileMenu/Menu';
+import ProfileButton from './ProfileMenu/ProfileButton';
+import Menu from './ProfileMenu/MainMenu/Menu';
 
 
 function App() {
