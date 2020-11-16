@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {ToastProvider} from 'react-toast-notifications';
-import {Counter} from './features/counter/Counter';
 import ProfileButton from './Profile/ProfileButton';
 import ProfileMenu from './Profile/ProfileMenu/ProfileMenu';
 
@@ -9,17 +8,7 @@ export interface Company {
   companies: string[],
 };
 
-const sampleCompany = {
-  user: 'Elon Musk',
-  companies: [
-    'Goldenpõld OÜ',
-    'Kiljatootja AS',
-    'Tartu Agro OÜ',
-  ],
-};
-
 function App() {
-  const [currentCompany, setCurrentCompany] = useState<string>(sampleCompany.companies[0]);
   const [isMenuOpen, toggleMenu] = useState<boolean>(false);
   const changeMenuState = () => toggleMenu(!isMenuOpen);
 
@@ -31,14 +20,16 @@ function App() {
       <div className='App'>
         <header className='relative flex justify-end px-8 py-4'>
           <ProfileButton
-            company={sampleCompany}
-            currentlySelected={currentCompany}
+            user='Elon Musk'
             toggleMenu={changeMenuState}
           />
-          <div className={`absolute top-0 left-0 w-screen h-screen bg-gray-100 z-10 ${isMenuOpen ? 'visible opacity-25' : 'invisible opacity-0'}`} onClick={() => toggleMenu(false)} />
+          <div
+            className={`absolute top-0 left-0 w-screen h-screen bg-gray-100 z-10
+            ${isMenuOpen ? 'visible opacity-25' : 'invisible opacity-0'}`}
+            onClick={() => toggleMenu(false)}
+          />
           <ProfileMenu show={isMenuOpen} />
         </header>
-        <Counter />
       </div>
     </ToastProvider>
   );

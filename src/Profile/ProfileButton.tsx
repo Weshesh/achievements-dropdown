@@ -1,13 +1,11 @@
 import React from 'react';
-import {Company} from '../App';
+import {useSelector} from 'react-redux';
+import {currentlySelected} from '../features/counter/userSlice';
 
-interface Props {
-  company: Company,
-  currentlySelected: string,
-  toggleMenu: any
-}
 
-function ProfileButton(props: Props) {
+function ProfileButton(props: {user: string, toggleMenu: any}) {
+  const company = useSelector(currentlySelected);
+
   return (
     <button
       type='button'
@@ -16,10 +14,10 @@ function ProfileButton(props: Props) {
     >
       <div className='flex flex-col text-right p-px'>
         <span className='text-sm font-extrabold leading-tight'>
-          {props.company.user}
+          {props.user}
         </span>
         <span className='text-sm text-gray-500 leading-snug'>
-          {props.currentlySelected}
+          {company.name}
         </span>
       </div>
       <div className='flex items-center pl-3 pr-2 h-full'>
