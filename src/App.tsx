@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {ToastProvider} from 'react-toast-notifications';
 import ProfileButton from './Profile/ProfileButton';
-import ProfileMenu from './Profile/ProfileMenu/ProfileMenu';
+import Menu from './Profile/ProfileMenu/Menu';
+
 
 function App() {
   const [isMenuOpen, toggleMenu] = useState<boolean>(false);
@@ -23,7 +24,7 @@ function App() {
             ${isMenuOpen ? 'visible opacity-25' : 'invisible opacity-0'}`}
             onClick={() => toggleMenu(false)}
           />
-          <ProfileMenu show={isMenuOpen} />
+          <Menu showMenu={isMenuOpen} />
         </header>
       </div>
     </ToastProvider>

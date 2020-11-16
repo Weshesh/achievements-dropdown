@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import ProfileMenuAchievementsList from '../ProfileMenuAchievementsList';
 import ProfileMenuAchievements from './ProfileMenuAchievements';
@@ -7,9 +7,15 @@ import CompanyButton from './CompanyButton';
 import {companyList} from '../../features/userSlice';
 
 
-function ProfileMenu(props: { show: boolean }) {
+function Menu(props: { showMenu: boolean }) {
   const [isAchievementsOpen, toggleAchievements] = useState<boolean>(false);
   const companies = useSelector(companyList);
+
+  useEffect(() => {
+    if (props.showMenu === false) {
+      toggleAchievements(false);
+    }
+  });
 
   const populateCompanies = companies.map((company) => (
     <CompanyButton
@@ -21,7 +27,7 @@ function ProfileMenu(props: { show: boolean }) {
   return (
     <div
       className={`absolute rounded-xl bg-white shadow-xl duration-200 z-20
-      ${props.show ? 'visible opacity-100' : 'invisible opacity-0'} overflow-x-hidden`}
+      ${props.showMenu ? 'visible opacity-100' : 'invisible opacity-0'} overflow-x-hidden`}
       style={{top: '100%', width: '304px'}}
     >
       <div className='w-full h-full'>
@@ -75,4 +81,4 @@ function ProfileMenu(props: { show: boolean }) {
   );
 }
 
-export default ProfileMenu;
+export default Menu;

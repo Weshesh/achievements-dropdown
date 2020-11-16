@@ -6,7 +6,6 @@ import {currentlySelected} from '../features/userSlice';
 function ProfileButton(props: {user: string, toggleMenu: any}) {
   const company = useSelector(currentlySelected);
 
-
   return (
     <button
       type='button'

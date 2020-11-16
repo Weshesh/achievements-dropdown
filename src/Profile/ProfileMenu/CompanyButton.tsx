@@ -14,7 +14,7 @@ function CompanyButton(props: CompanyButtonProps) {
 
   const baseStyle = 'px-4 py-3 w-full font-bold text-left border-gray-100';
   const stateSyles = isSelected
-    ? 'text-green-500 bg-green-500 bg-opacity-10 hover:bg-opacity-20 focus:bg-opacity-20'
+    ? 'text-green-600 bg-green-500 bg-opacity-10 hover:bg-opacity-20 focus:bg-opacity-20'
     : 'hover:bg-gray-100 focus:bg-gray-200';
 
   return (
