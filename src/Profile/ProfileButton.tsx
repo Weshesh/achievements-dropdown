@@ -6,13 +6,14 @@ import {currentlySelected} from '../features/counter/userSlice';
 function ProfileButton(props: {user: string, toggleMenu: any}) {
   const company = useSelector(currentlySelected);
 
+
   return (
     <button
       type='button'
       className='flex rounded px-px hover:bg-gray-100 focus:bg-gray-100'
       onClick={props.toggleMenu}
     >
-      <div className='flex flex-col text-right p-px'>
+      <div className='flex flex-col text-right p-px pl-2'>
         <span className='text-sm font-extrabold leading-tight'>
           {props.user}
         </span>

@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import ProfileMenuAchievementsList from '../ProfileMenuAchievementsList';
 import ProfileMenuAchievements from './ProfileMenuAchievements';
 import ProfileMenuButton from './ProfileMenuButton';
-import ProfileMenuCompanybutton from './ProfileMenuCompanyButton';
+import CompanyButton from './CompanyButton';
 import {companyList} from '../../features/counter/userSlice';
 
 
@@ -12,10 +12,9 @@ function ProfileMenu(props: { show: boolean }) {
   const companies = useSelector(companyList);
 
   const populateCompanies = companies.map((company) => (
-    <ProfileMenuCompanybutton
+    <CompanyButton
       key={company.name}
       inputCompany={company}
-      isActive={false}
     />
   ));
 
