@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
-import ProfileMenuAchievementsList from '../ProfileMenuAchievementsList';
+import AchievementsList from '../AchievementsList';
 import ProfileMenuAchievements from './ProfileMenuAchievements';
 import MenuButton from './MenuButton';
 import CompanyButton from './CompanyButton';
@@ -26,7 +26,7 @@ function Menu(props: { showMenu: boolean }) {
 
   return (
     <div
-      className={`absolute rounded-xl bg-white shadow-xl duration-200 z-20
+      className={`absolute rounded-xl bg-white shadow-xl duration-400 z-20
       ${props.showMenu ? 'visible opacity-100' : 'invisible opacity-0'} overflow-x-hidden`}
       style={{top: '100%', width: '304px'}}
     >
@@ -62,7 +62,7 @@ function Menu(props: { showMenu: boolean }) {
 
       <div
         className='absolute top-0 w-full h-full bg-white
-                   shadow-2xl duration-200 overflow-hidden'
+                   shadow-2xl duration-100 overflow-hidden'
         style={{left: (isAchievementsOpen ? '0%': '110%')}}
       >
         <button
@@ -75,7 +75,7 @@ function Menu(props: { showMenu: boolean }) {
             Achievements
           </span>
         </button>
-        <ProfileMenuAchievementsList />
+        <AchievementsList />
       </div>
     </div>
   );
