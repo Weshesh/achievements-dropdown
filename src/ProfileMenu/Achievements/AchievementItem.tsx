@@ -11,12 +11,12 @@ function AchievementItem(props: {achievement: Achievement}) {
   return (
     <button type='button' className='px-4 py-2 w-full hover:bg-gray-100 focus:bg-gray-200'>
       <div className='text-left'>
-        <span className={isCompleted ? 'text-green-500' : ''}>
+        <div className={`font-bold leading-snug {isCompleted ? 'text-green-500' : ''}`}>
           {props.achievement.name}
-        </span>
-        <p>
+        </div>
+        <div className='text-gray-500 leading-tight'>
           {props.achievement.description}
-        </p>
+        </div>
       </div>
       <div className='flex'>
         <div className='relative flex mt-2 mb-1 rounded-full w-full h-2 bg-gray-300' >
