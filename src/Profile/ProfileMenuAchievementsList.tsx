@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {currentlySelected} from '../features/counter/userSlice';
+import {currentlySelected} from '../features/userSlice';
 
 function ProfileMenuAchievementsList() {
   const achievements = useSelector(currentlySelected).achievements;

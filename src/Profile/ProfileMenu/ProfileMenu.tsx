@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 import ProfileMenuAchievementsList from '../ProfileMenuAchievementsList';
 import ProfileMenuAchievements from './ProfileMenuAchievements';
-import ProfileMenuButton from './ProfileMenuButton';
+import MenuButton from './MenuButton';
 import CompanyButton from './CompanyButton';
-import {companyList} from '../../features/counter/userSlice';
+import {companyList} from '../../features/userSlice';
 
 
 function ProfileMenu(props: { show: boolean }) {
@@ -38,20 +38,20 @@ function ProfileMenu(props: { show: boolean }) {
           <ProfileMenuAchievements />
         </div>
         <div className='border-b border-gray-200'>
-          <ProfileMenuButton
+          <MenuButton
             label='Get the mobile app' iconClass='icon__mobile'
           />
-          <ProfileMenuButton
+          <MenuButton
             label='Community'
             iconClass='icon__community'
           />
-          <ProfileMenuButton
+          <MenuButton
             label='Knowledge base'
             iconClass='icon__knowledge'
           />
         </div>
-        <ProfileMenuButton label='Settings' iconClass='icon__cog' />
-        <ProfileMenuButton label='Log out' iconClass='icon__log-out' red />
+        <MenuButton label='Settings' iconClass='icon__cog' />
+        <MenuButton label='Log out' iconClass='icon__log-out' red />
       </div>
 
       <div

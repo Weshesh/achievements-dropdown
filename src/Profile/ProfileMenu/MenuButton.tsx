@@ -8,7 +8,7 @@ interface Props {
   red?: true
 }
 
-function ProfileMenuButton(props: Props) {
+function MenuButton(props: Props) {
   const {label, iconClass, action, red} = props;
   const {addToast} = useToasts();
   function notInUse() {
@@ -34,4 +34,4 @@ function ProfileMenuButton(props: Props) {
   );
 }
 
-export default ProfileMenuButton;
+export default MenuButton;
