@@ -14,7 +14,7 @@ function ProfileMenu(props: { show: boolean }) {
   const populateCompanies = companies.map((company) => (
     <ProfileMenuCompanybutton
       key={company.name}
-      label={company.name}
+      inputCompany={company}
       isActive={false}
     />
   ));

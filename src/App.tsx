@@ -3,11 +3,6 @@ import {ToastProvider} from 'react-toast-notifications';
 import ProfileButton from './Profile/ProfileButton';
 import ProfileMenu from './Profile/ProfileMenu/ProfileMenu';
 
-export interface Company {
-  user: string,
-  companies: string[],
-};
-
 function App() {
   const [isMenuOpen, toggleMenu] = useState<boolean>(false);
   const changeMenuState = () => toggleMenu(!isMenuOpen);
