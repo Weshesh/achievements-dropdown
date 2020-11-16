@@ -27,7 +27,8 @@ function Menu(props: { showMenu: boolean }) {
   return (
     <div
       className={`absolute rounded-xl bg-white shadow-xl delay-75 duration-300 z-20
-      ${props.showMenu ? 'visible opacity-100' : 'invisible opacity-0'} overflow-x-hidden`}
+      ${props.showMenu ? 'visible opacity-100' : 'invisible opacity-0'}
+      ${isAchievementsOpen ? 'overflow-y-scroll' : 'overflow-hidden'}`}
       style={{top: '100%', width: '304px'}}
     >
       <div className='w-full h-full'>
@@ -59,24 +60,7 @@ function Menu(props: { showMenu: boolean }) {
         <MenuButton label='Settings' iconClass='icon__cog' />
         <MenuButton label='Log out' iconClass='icon__log-out' red />
       </div>
-
-      <div
-        className='absolute top-0 w-full h-full bg-white
-                   shadow-2xl duration-100 overflow-hidden'
-        style={{left: (isAchievementsOpen ? '0%': '110%')}}
-      >
-        <button
-          type='button'
-          className='flex items-center px-4 pt-3 pb-1 text-gray-600 font-bold'
-          onClick={() => toggleAchievements(false)}
-        >
-          <i className='icon-16 icon__back bg-gray-900 mr-2' />
-          <span>
-            Achievements
-          </span>
-        </button>
-        <AchievementsList />
-      </div>
+      <AchievementsList showAchievements={isAchievementsOpen} toggleAchievements={toggleAchievements} />
     </div>
   );
 }

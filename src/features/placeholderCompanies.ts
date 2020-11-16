@@ -6,7 +6,7 @@ const sampleCompanies: Company[] = [
     achievements: [
       {
         name: "Sharpen the harpoons",
-        description: "Do We have all We need?",
+        description: "Do We have enough of them? Or Should we make more?",
         toDo: 100,
         done: 100,
         showPercentage: true
@@ -15,7 +15,7 @@ const sampleCompanies: Company[] = [
         name: "Fit Pequod for voyage",
         description: "Do We have all We need? Most importantly, do we have enough rum?",
         toDo: 5,
-        done: 1,
+        done: 5,
         showPercentage: true
       },
       {
@@ -46,7 +46,7 @@ const sampleCompanies: Company[] = [
         name: "Meet M.D.",
         description: "Take revenger on the white whale.",
         toDo: 1,
-        done: 1
+        done: 0
       }
     ]
   },
