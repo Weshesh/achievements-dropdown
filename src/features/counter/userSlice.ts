@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AppThunk, RootState } from '../../app/store';
+import {createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {RootState} from '../../app/store';
+import placeholderCompanies from './placeholderCompanies.json'
 
 interface Achievement {
   name: string,

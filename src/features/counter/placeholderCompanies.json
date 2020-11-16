@@ -1,0 +1,54 @@
+{
+  "companyList": [
+    {
+      "name": "OÜ Kappav Hobune",
+      "achievements": [
+        {
+          "name": "Do the laundry",
+          "description": "Its dirty.",
+          "toDo": 10,
+          "done": 5,
+          "showPercentage": false
+        }
+      ]
+    },
+    {
+      "name": "Vallatu Traktor AS",
+      "description": "A tractor company",
+      "achievements": [
+        {
+          "name": "Change the oil",
+          "description": "Its old.",
+          "toDo": 1,
+          "done": 2,
+          "showPercentage": true
+        },
+        {
+          "name": "Fill the tank",
+          "description": "Its empty.",
+          "toDo": 80,
+          "done": 42,
+          "showPercentage": true
+        },
+        {
+          "name": "Take it to a drive",
+          "description": "Its old",
+          "toDo": 1,
+          "done": 1
+        }
+      ]
+    },
+    {
+      "name": "Lehm Tegi Muu OÜ",
+      "achievements": [
+        {
+          "name": "To the laundry",
+          "description": "Its dirty",
+          "toDo": 10,
+          "done": 5,
+          "showPercentage": true
+        }
+      ]
+    }
+  ]
+}
