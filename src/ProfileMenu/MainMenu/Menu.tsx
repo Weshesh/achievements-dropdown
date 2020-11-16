@@ -26,7 +26,7 @@ function Menu(props: { showMenu: boolean }) {
 
   return (
     <div
-      className={`absolute rounded-xl bg-white shadow-xl duration-400 z-20
+      className={`absolute rounded-xl bg-white shadow-xl duration-300 z-20
       ${props.showMenu ? 'visible opacity-100' : 'invisible opacity-0'} overflow-x-hidden`}
       style={{top: '100%', width: '304px'}}
     >
