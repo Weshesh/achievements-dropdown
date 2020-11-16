@@ -27,11 +27,10 @@ function Menu(props: { showMenu: boolean }) {
   return (
     <div
       className={`absolute rounded-xl bg-white shadow-xl delay-75 duration-300 z-20
-      ${props.showMenu ? 'visible opacity-100' : 'invisible opacity-0'}
-      ${isAchievementsOpen ? 'overflow-y-scroll' : 'overflow-hidden'}`}
+      ${props.showMenu ? 'visible opacity-100' : 'invisible opacity-0'} overflow-hidden`}
       style={{top: '100%', width: '304px'}}
     >
-      <div className='w-full h-full'>
+      <div className='relative w-full h-full'>
         <div className='px-4 pt-3 pb-1 text-gray-600 font-bold'>
           Your companies
         </div>
